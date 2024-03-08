@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { jsPDF } from 'jspdf';
 
 const Savepdf = () => {
@@ -9,23 +9,37 @@ const Savepdf = () => {
 
         // Retrieve all keys from localStorage
         const keys = Object.keys(localStorage);
+        let y=10;
 
         // Iterate through each key and gather the data
         keys.forEach(key => {
             const value = localStorage.getItem(key);
             // Add key-value pair to the PDF document
-            doc.text(`${key}: ${value}`, 10, doc.internal.getNumberOfPages() * 10);
+            doc.text(`${key}: ${value}`, 10,y);
+            y+=10;
         });
 
-        // Save the PDF document
         doc.save('localStorageData.pdf');
+
+
+    };
+
+    const handleSavePDFConfirmation = () => {
+        // Display confirmation dialog
+        const isConfirmed = window.confirm("WARNING!!!   DO YOU WANT TO END THE GAME??");
+        
+        // If the user confirms, call savePDF
+        if (isConfirmed) {
+            savePDF();
+        }
     };
 
     return (
-        <div>
-            <h1>Save Local Storage Data as PDF</h1>
-            <button onClick={savePDF}>Save PDF</button>
-            <Link to="/saveit">Save PDF with Link</Link>
+        <div className='savepdf'>
+            {/* <h1>Save Local Storage Data as PDF</h1> */}
+            <button onClick={handleSavePDFConfirmation}>Final submit</button>
+            
+            
         </div>
     );
 }
