@@ -1,0 +1,206 @@
+.App {
+  text-align: center;
+}
+h1{
+  color:white;
+}
+p{
+  color: white;
+}
+.task
+{
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  
+  
+
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+}
+
+.navbar {
+  background-color: black;
+  overflow: hidden;
+  
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  color: #0b1842;
+  margin-bottom: 5%;
+}
+
+.navbar-logo {
+  padding: 1% 1%;
+  color: #db5a2e;
+  font-family: "Iceberg", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 50px;
+}
+
+.navbar-button button {
+  width: 7rem;
+  font-family: "Iceberg", sans-serif;
+
+  font-weight: 400;
+  font-style: normal;
+  background-color: black;
+  color: #db5a2e;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 1px solid #db5a2e;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-button button:hover {
+  background-color: #db5a2e;
+  color: black;
+}
+
+/* <!--Button on homepage --> */
+.button-container {
+  padding-left: 5%;
+  align-items: center; 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr)); /* Adjust column width for responsiveness */
+  grid-gap: 20px; /* Adjust gap between buttons */
+}
+
+.button-container a {
+  text-decoration: none; /* Remove underline from links */
+}
+
+.button-container button {
+  
+  margin: 2%;
+  width: 80%;
+  padding: 10px;
+  height: 3rem;
+  font-size: 16px;
+  border: none;
+  background-color: #db5a2e;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  font-family: "Iceberg", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .button-container {
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)); /* Adjust column width for smaller screens */
+  }
+}
+
+
+.button-container button:hover {
+  background-color: white;
+  
+  color: #db5a2e;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap');
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* task fileds */
+
+.task {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center items vertically and horizontally */
+  gap: 2%; /* Add space between each entity */
+}
+
+.task img {
+  width: 100%; /* Make the image responsive */
+  max-width: 300px; /* Limit the maximum width of the image */
+  height: auto;
+  margin-bottom: 1%; /* Add space below the image */
+}
+
+.task form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.task label {
+  margin-bottom: 10px; /* Add space below the label */
+}
+
+.task input[type="text"] {
+  padding: 10px;
+  margin-bottom: 10px; /* Add space below the input field */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 20%;
+}
+
+.task button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #db5a2e;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .task img {
+    max-width: 200px; /* Adjust maximum width for smaller screens */
+  }
+
+  .task input[type="text"] {
+    width: 20%; /* Adjust input field width for smaller screens */
+  }
+
+  .task button {
+    width: 80%; /* Adjust button width for smaller screens */
+  }
+}
+
