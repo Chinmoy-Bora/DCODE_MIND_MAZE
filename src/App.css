@@ -3,6 +3,11 @@
 }
 h1{
   color:white;
+  word-spacing: 3px;
+}
+h3{
+  color: white;
+  word-spacing: 3px;
 }
 p{
   color: white;
@@ -22,7 +27,8 @@ p{
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Iceberg", sans-serif;
+  font-style: normal;
   background-color: black;
 }
 
@@ -38,7 +44,7 @@ body {
   align-items: center;
   
   color: #0b1842;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
 }
 
 .navbar-logo {
@@ -54,6 +60,8 @@ body {
 .navbar-button button {
   width: 7rem;
   font-family: "Iceberg", sans-serif;
+  margin-right: 2rem;
+  
 
   font-weight: 400;
   font-style: normal;
@@ -169,10 +177,13 @@ body {
 }
 
 .task label {
+
   margin-bottom: 10px; /* Add space below the label */
 }
 
 .task input[type="text"] {
+  font-family: "Iceberg", sans-serif;
+  font-style: normal;
   padding: 10px;
   margin-bottom: 10px; /* Add space below the input field */
   border: 1px solid #ccc;
@@ -181,6 +192,9 @@ body {
 }
 
 .task button {
+  font-family: "Iceberg", sans-serif;
+  font-style: normal;
+  
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -204,26 +218,46 @@ body {
   }
 }
 
-.savepdf
-{
+.savepdf {
   padding: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center; /* Center text horizontally */
 }
 
 .savepdf button {
   color: white;
-  font-size: 30px;
+  font-size: 2vw; /* Adjust font size relative to viewport width */
   background-color: green;
-  width: 20%;
-  height: 50px; /* Adjust the height as needed */
+  width: 50%; /* Adjust width relative to parent container */
+  max-width: 200px; /* Set a maximum width */
+  height: 10vw; /* Adjust height relative to viewport width */
+  max-height: 50px; /* Set a maximum height */
   border-radius: 10px;
+  margin-top: 20px; /* Add margin to top */
+  cursor: pointer;
 }
-.savepdf button:hover{
+
+.savepdf button:hover {
   background-color: aquamarine;
   color: #626060;
 }
+
+
+/* task 2 */
+.task_2_img
+{
+  display: flex;
+  
+}
+
+.task_2_img img{
+  
+  padding: 2%;
+}
+
+
 
 
