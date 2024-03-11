@@ -7,7 +7,14 @@ const Task1 = () => {
         event.preventDefault(); // Prevent the default form submit action
 
         // Save the answer to local storage
-        localStorage.setItem('task1Answer', answer);
+        if(answer.trim()==="")
+        {
+            alert("Enter valid input");
+        }
+        else{
+
+            localStorage.setItem('task1Answer', answer.trim());
+        }
 
         // Reset the answer
         setAnswer('');

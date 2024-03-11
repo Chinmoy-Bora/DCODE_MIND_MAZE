@@ -6,11 +6,14 @@ const Task2 = () => {
     const handleSubmit = (event) => {
         event.preventDefault(); // Prevent the default form submit action
 
-        // Save the answer to local storage
-        localStorage.setItem('task2Answer', answer2);
+        if(answer2.trim()==="")
+        {
+            alert("Enter valid input");
+        }
+        else{
 
-        // Reset the answer
-        setAnswer('');
+            localStorage.setItem('task1Answer', answer2.trim());
+        }
     };
 
     return (

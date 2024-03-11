@@ -4,6 +4,13 @@
 h1{
   color:white;
   word-spacing: 3px;
+  
+}
+h2{
+  color:#db5a2e;
+  word-spacing: 4px;
+  line-height: 50px;
+  margin-left: 3%;
 }
 h3{
   color: white;
@@ -230,7 +237,7 @@ body {
 .savepdf button {
   color: white;
   font-size: 2vw; /* Adjust font size relative to viewport width */
-  background-color: green;
+  background-color:#82A0AA;
   width: 50%; /* Adjust width relative to parent container */
   max-width: 200px; /* Set a maximum width */
   height: 10vw; /* Adjust height relative to viewport width */
@@ -238,6 +245,8 @@ body {
   border-radius: 10px;
   margin-top: 20px; /* Add margin to top */
   cursor: pointer;
+  font-family: "Iceberg", sans-serif;
+  font-style: normal;
 }
 
 .savepdf button:hover {
@@ -247,15 +256,30 @@ body {
 
 
 /* task 2 */
-.task_2_img
-{
+.task_2_img {
   display: flex;
-  
+  justify-content: center; /* Center images horizontally */
+  flex-wrap: wrap; /* Allow images to wrap to the next line if needed */
 }
 
-.task_2_img img{
-  
-  padding: 2%;
+.task_2_img img {
+  max-width: 20%; /* Make sure images don't exceed their container's width */
+  height: auto; /* Maintain aspect ratio */
+  padding: 2%; /* Add padding around each image */
+}
+
+/* task 8 */
+
+.task_8_vid {
+  display: flex;
+  justify-content: center; /* Center images horizontally */
+  flex-wrap: wrap; /* Allow images to wrap to the next line if needed */
+}
+
+.task_8_vid video {
+  max-width: 40%; /* Make sure images don't exceed their container's width */
+  height: auto; /* Maintain aspect ratio */
+  padding: 2%; /* Add padding around each image */
 }
 
 
