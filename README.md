@@ -1,70 +1,55 @@
-# Getting Started with Create React App
+# MIND MAZE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to MIND MAZE, an engaging ARG (Alternate Reality Game) designed exclusively for our college event! Developed by Chinmoy Bora, this React-based web game invites players to dive into a world of puzzles and tasks. This README is your guide to installing, navigating, and enjoying the game, as well as understanding its features and how administrators can utilize it.
 
-## Available Scripts
+## Features 
 
-In the project directory, you can run:
+Solve tasks: Players can solve any task out of the given tasks provided in the game.Submit answers: Once players solve a task, they can submit their answers.Local storage: Submitted answers are stored locally using the browser's local storage feature.Admin functionality: Admins can retrieve the submitted answers along with the task number in a PDF format.Automatic PDF generation: The game automatically generates a PDF file containing submitted answers, which is saved to the device.
 
-### `npm start`
+## Installation 
+To run MIND MAZE locally on your machine, follow these steps:
+#### Clone the repository:
+           git clone <repository_url>
+#### Navigate to the project directory:
+            cd mind-maze
+#### Install dependencies:
+            npm install
+#### Start the development server:
+            npm start
+Open your web browser and visit http://localhost:3000 to access MIND MAZE.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Usage
 
-### `npm test`
+#### Starting the Game: 
+Players can begin solving tasks immediately upon accessing MIND MAZE.
+#### Submitting Answers: 
+After completing a task, players submit their answers via the game's submission interface.
+#### Admin Panel Access: 
+Administrators have exclusive access to retrieve and review submitted answers in a structured PDF format.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Admin panel access 
 
-### `npm run build`
+The admin panel provides the following functionalities:
+#### View submitted answers: 
+Admins can view the submitted answers along with the task number.
+#### Generate PDF: 
+Admins can generate a PDF file containing the submitted answers for record-keeping purposes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies used 
+MIND MAZE is developed using the following technologies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+React: A JavaScript library for building user interfaces.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+HTML5: The standard markup language for web pages.
 
-### `npm run eject`
+CSS3: The style sheet language used for describing the presentation of a document written in HTML.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+JavaScript: A programming language that enables interactive web pages.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Local Storage: HTML5 feature used to store data locally within the user's browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Developer
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project was developed by Chinmoy Bora, whose passion for coding and creativity brought MIND MAZE to life.
