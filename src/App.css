@@ -363,3 +363,20 @@ body {
     font-size: 14px;
   }
 }
+
+/* task 7 */
+.task_7_img {
+  display: flex;
+  justify-content: center;
+  /* Center images horizontally */
+  flex-wrap: wrap;
+  /* Allow images to wrap to the next line if needed */
+}
+
+.task_7_img img {
+  width: 100%; /* Set the width to 100% to make the image fill its container */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 800px; /* Limit the maximum width of the image to 800px */
+  padding: 2%; /* Add padding around each image */
+}
+
