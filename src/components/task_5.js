@@ -34,7 +34,7 @@ const Task5 = () => {
             </div>
             <h3> TIPS : Reading Sometime helps</h3>
             <form onSubmit={handleSubmit} >
-                <label htmlFor="task5Input">Task 5 Answer:</label>
+                <label htmlFor="task5Input"></label>
                 <input
                     id="task5Input"
                     type="text"
