@@ -7,14 +7,16 @@ const Task8 = () => {
         event.preventDefault(); // Prevent the default form submit action
 
         // Save the answer to local storage
-        if(answer8.trim()!=="")
-        {
-            localStorage.setItem('task6Answer', answer8.trim());
-            
+        if (answer8.trim() === "") {
+            alert("Enter valid input");
         }
-        else
-        {
-            alert("Enter valid input")
+        else if (answer8.trim() === "stockholm syndrome") {
+
+            localStorage.setItem('task8Answer', answer8.trim());
+            setAnswer('');
+        }
+        else {
+            alert("Wrong answer !!!");
         }
 
         // Reset the answer
@@ -29,33 +31,33 @@ const Task8 = () => {
                 Though each path diverges in the light,<br></br>
                 Together, they whisper a shared insight. "</h2>
             <div className='task_8_vid'>
-            <video controls >
-            <source src="/resource/Vid1.mp4" type="video/mp4"/>
-             </video>
-             <video controls >
-            <source src="/resource/Vid2.mp4" type="video/mp4"/>
-            </video>
-            <video controls >
-            <source src="/resource/Vid3.mp4" type="video/mp4"/>
-            </video>
+                <video controls >
+                    <source src="/resource/Vid1.mp4" type="video/mp4" />
+                </video>
+                <video controls >
+                    <source src="/resource/Vid2.mp4" type="video/mp4" />
+                </video>
+                <video controls >
+                    <source src="/resource/Vid3.mp4" type="video/mp4" />
+                </video>
 
 
-                    </div>
-                   
-                    <form onSubmit={handleSubmit} >
-                        <label htmlFor="task8Input">Task 8 Answer:</label>
-                        <input
-                            id="task8Input"
-                            type="text"
-                            placeholder="Enter your answer"
-                            value={answer8}
-                            onChange={(e) => setAnswer(e.target.value)}
-
-                        />
-                        <button type="submit">Submit</button>
-                    </form>
             </div>
-            );
+
+            <form onSubmit={handleSubmit} >
+                <label htmlFor="task8Input">Task 8 Answer:</label>
+                <input
+                    id="task8Input"
+                    type="text"
+                    placeholder="Enter your answer"
+                    value={answer8}
+                    onChange={(e) => setAnswer(e.target.value)}
+
+                />
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    );
 }
 
-            export default Task8;
+export default Task8;

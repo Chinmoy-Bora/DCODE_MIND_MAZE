@@ -9,14 +9,14 @@ const Savepdf = () => {
 
         // Retrieve all keys from localStorage
         const keys = Object.keys(localStorage);
-        let y=10;
+        let y = 10;
 
         // Iterate through each key and gather the data
         keys.forEach(key => {
             const value = localStorage.getItem(key);
             // Add key-value pair to the PDF document
-            doc.text(`${key}: ${value}`, 10,y);
-            y+=10;
+            doc.text(`${key}: ${value}`, 10, y);
+            y += 10;
         });
 
         doc.save('localStorageData.pdf');
@@ -27,7 +27,7 @@ const Savepdf = () => {
     const handleSavePDFConfirmation = () => {
         // Display confirmation dialog
         const isConfirmed = window.confirm("WARNING!!!   DO YOU WANT TO END THE GAME??");
-        
+
         // If the user confirms, call savePDF
         if (isConfirmed) {
             savePDF();
@@ -38,8 +38,8 @@ const Savepdf = () => {
         <div className='savepdf'>
             {/* <h1>Save Local Storage Data as PDF</h1> */}
             <button onClick={handleSavePDFConfirmation}>Final submit</button>
-            
-            
+
+
         </div>
     );
 }
