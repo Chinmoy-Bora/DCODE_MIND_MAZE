@@ -25,7 +25,7 @@ const Task15 = () => {
 
     return (
         <div className="task">
-            <h1>Task 8 : I My Subject</h1>
+            <h1>Task 8 : Innovation | Knowledge | Progress</h1>
             <h2>" There's one thing that has influnced me the most,<br></br>
                 History,Language and Literature has made my brain roast,<br></br>
                 But I love that one subject that Debunks ghosts,<br></br>
