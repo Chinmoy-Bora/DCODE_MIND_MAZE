@@ -29,8 +29,8 @@ const Task1 = () => {
             <h1>Task 1 : Erosion</h1>
             <p><h2>" Moments corrode, fading objects, fraying bonds, and dimming memories, reminding us of life's impermanence, yet urging us to cherish each fleeting instant "</h2></p>
             <div className='task_2_img' >
-                <img src="/resource/task_1_img.jpg" alt="task1_img" style={{ width: "30%" }} />
-                <img src="/resource/task_1_img_2.jpeg" alt="task1_img" style={{ width: "30%" }} />
+                <img src="/resource/task_1_img.jpg" alt="task1_img"  />
+                <img src="/resource/task_1_img_2.jpeg" alt="task1_img"  />
             </div>
             <div className='task_6_aud'>
                 <audio src="/resource/task_1_aud.m4a" controls />
