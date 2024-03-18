@@ -14,10 +14,18 @@ const Savepdf = () => {
         // Iterate through each key and gather the data
         keys.forEach(key => {
             const value = localStorage.getItem(key);
+
+
             // Add key-value pair to the PDF document
             doc.text(`${key}: ${value}`, 10, y);
             y += 10;
         });
+
+        // Add local time
+        const currentTime = new Date().toLocaleString(); // Get current local time
+        // Add local time to the PDF document
+        doc.text(`Local Time: ${currentTime}`, 10, y);
+        y += 10;
 
         doc.save('localStorageData.pdf');
 

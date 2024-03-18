@@ -394,3 +394,15 @@ body {
   padding: 5%;
 }
 
+/* task 11 */
+
+.task_11 {
+
+  width: 30%;
+}
+
+.task_11 img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid white; /* Adjust border properties as needed */
+}

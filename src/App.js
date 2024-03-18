@@ -10,6 +10,7 @@ import Task8 from './components/task_8';
 import Task5 from './components/task_5';
 import Task7 from './components/task_7';
 import Task15 from './components/task_15';
+import Task11 from './components/task_11';
 // import Savepdf from './components/savepdf';
 // import Startpage from './components/start';
 function App() {
@@ -40,7 +41,7 @@ function App() {
           <Route exact path='/task_8' element={<Task8 />} />
           <Route exact path='/task_9' element={<Task6 />} />
           <Route exact path='/task_10' element={<Task6 />} />
-          <Route exact path='/task_11' element={<Task6 />} />
+          <Route exact path='/task_11' element={<Task11 />} />
           <Route exact path='/task_12' element={<Task6 />} />
           <Route exact path='/task_13' element={<Task6 />} />
           <Route exact path='/task_14' element={<Task6 />} />
