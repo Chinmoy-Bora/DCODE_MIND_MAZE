@@ -1,7 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Task15 = () => {
     const [answer15, setAnswer] = useState('');
+
+    const [solved15, setSolved] = useState(false);
+
+    useEffect(() => {
+      // Check local storage for solved state
+      const solvedState = localStorage.getItem('task15Solved');
+      if (solvedState === 'true') {
+          setSolved(true);
+      }
+  }, []);
+
 
     const handleSubmit = (event) => {
         event.preventDefault(); // Prevent the default form submit action
@@ -13,6 +24,9 @@ const Task15 = () => {
         else if (answer15.trim() === "experience") {
 
             localStorage.setItem('task15Answer', answer15.trim());
+            localStorage.setItem('task15Solved', 'true');
+            setSolved(true);
+
             setAnswer('');
         }
         else {
@@ -42,6 +56,9 @@ const Task15 = () => {
 
 
             </div> */}
+                        {  solved15 ? (<p className="solved-message">Solved!</p>) :
+            (
+
 
             <form onSubmit={handleSubmit} >
                 <label htmlFor="task15Input"></label>
@@ -55,6 +72,7 @@ const Task15 = () => {
                 />
                 <button type="submit">Submit</button>
             </form>
+            )}
         </div>
     );
 }

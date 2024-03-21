@@ -406,3 +406,54 @@ body {
   height: auto;
   border: 2px solid white; /* Adjust border properties as needed */
 }
+
+.task_11 a{
+  color: white;
+}
+
+/* task 3 */
+
+.task_3_img {
+  display: flex;
+  justify-content: center;
+  /* Center images horizontally */
+  flex-wrap: wrap;
+  /* Allow images to wrap to the next line if needed */
+}
+
+.task_3_img img {
+  width: 50%; /* Set the width to 100% to make the image fill its container */
+  height: 10%; /* Maintain aspect ratio */
+  max-width: 800px; /* Limit the maximum width of the image to 800px */
+  padding: 2%; /* Add padding around each image */
+
+}
+
+
+/* task 13 */
+
+.task_13_img {
+  display: flex;
+  justify-content: center;
+  /* Center images horizontally */
+  flex-wrap: wrap;
+  /* Allow images to wrap to the next line if needed */
+}
+
+.task_13_img img {
+  width: 100%; /* Set the width to 100% to make the image fill its container */
+  height: 10%; /* Maintain aspect ratio */
+  max-width: 800px; /* Limit the maximum width of the image to 800px */
+  padding: 2%; /* Add padding around each image */
+
+}
+
+/* solved msg */
+.solved-message
+{
+  color: #db5a2e;
+  font-family: "Iceberg", sans-serif;
+  font-style: normal;
+  font-size: 200%;
+}
+
