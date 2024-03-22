@@ -49,7 +49,7 @@ const Task1 = () => {
             localStorage.setItem('teamId', teamId.trim());
 
             // Set solved to true
-            setSolved(true);
+            
         }
 
         // Reset the inputs
@@ -84,6 +84,26 @@ const Task1 = () => {
 
     return (
         <div className="task">
+
+<form onSubmit={handleSubmit2} >
+                    <label htmlFor="teamIdInput">Team ID:</label>
+                    <input
+                        id="teamIdInput"
+                        type="text"
+                        placeholder="Enter team ID"
+                        value={teamId}
+                        onChange={(e) => setTeamId(e.target.value)}
+                    />
+                    <label htmlFor="teamNameInput">Team Name:</label>
+                    <input
+                        id="teamNameInput"
+                        type="text"
+                        placeholder="Enter team name"
+                        value={teamName}
+                        onChange={(e) => setTeamName(e.target.value)}
+                    />
+                    <button type="submit">Submit</button>
+                </form>
             <h1>Task 1 : Erosion</h1>
             <p><h2>" Moments corrode, fading objects, fraying bonds, and dimming memories, reminding us of life's impermanence, yet urging us to cherish each fleeting instant "</h2></p>
             <div className='task_2_img' >
@@ -109,25 +129,7 @@ const Task1 = () => {
                 </form>
             )}
 
-                <form onSubmit={handleSubmit2} >
-                    <label htmlFor="teamIdInput">Team ID:</label>
-                    <input
-                        id="teamIdInput"
-                        type="text"
-                        placeholder="Enter team ID"
-                        value={teamId}
-                        onChange={(e) => setTeamId(e.target.value)}
-                    />
-                    <label htmlFor="teamNameInput">Team Name:</label>
-                    <input
-                        id="teamNameInput"
-                        type="text"
-                        placeholder="Enter team name"
-                        value={teamName}
-                        onChange={(e) => setTeamName(e.target.value)}
-                    />
-                    <button type="submit">Submit</button>
-                </form>
+
         </div>
     );
 }
