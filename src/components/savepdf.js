@@ -11,10 +11,15 @@ const Savepdf = () => {
         const keys = Object.keys(localStorage);
         let y = 10;
 
+        // Prepare data object to store key-value pairs
+        const data = {};
+
         // Iterate through each key and gather the data
         keys.forEach(key => {
             const value = localStorage.getItem(key);
 
+            // Add key-value pair to the data object
+            data[key] = value;
 
             // Add key-value pair to the PDF document
             doc.text(`${key}: ${value}`, 10, y);
@@ -27,9 +32,42 @@ const Savepdf = () => {
         doc.text(`Local Time: ${currentTime}`, 10, y);
         y += 10;
 
+        // Convert data object to JSON string
+        // const jsonData = JSON.stringify(data);
+        const teamId = localStorage.getItem('teamId');
+
+        // Count the number of key-value pairs
+        const taskSolved = (keys.length -1)/2;
+
+        // Send data and count to API
+        sendDataToAPI(teamId, taskSolved);
+
         doc.save('localStorageData.pdf');
+    };
 
-
+    const sendDataToAPI = (teamId, taskSolved) => {
+        // Replace 'your-api-endpoint' with your actual API endpoint
+        fetch('http://139.59.88.183:8000/api/v1/user/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ teamId, taskSolved })
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to send data to API');
+            }
+            return response.json();
+        })
+        .then(responseData => {
+            console.log('API Response:', responseData);
+            // Handle API response if needed
+        })
+        .catch(error => {
+            console.error('Error sending data to API:', error.message);
+            // Handle error if needed
+        });
     };
 
     const handleSavePDFConfirmation = () => {
@@ -46,11 +84,8 @@ const Savepdf = () => {
         <div className='savepdf'>
             {/* <h1>Save Local Storage Data as PDF</h1> */}
             <button onClick={handleSavePDFConfirmation}>Final submit</button>
-
-
         </div>
     );
 }
 
 export default Savepdf;
-

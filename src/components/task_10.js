@@ -19,7 +19,7 @@ const Task10 = () => {
       alert("Enter valid input");
     }
 
-    localStorage.setItem("task5Answer", answer10.trim());
+    localStorage.setItem("task10Answer", answer10.trim());
     localStorage.setItem('task10Solved', 'true');
     setSolved(true);
     setAnswer("");

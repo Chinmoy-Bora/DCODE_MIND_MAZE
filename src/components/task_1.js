@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 
 const Task1 = () => {
     const [answer, setAnswer] = useState('');
+    const [teamId, setTeamId] = useState('');
+    const [teamName, setTeamName] = useState('');
     const [solved, setSolved] = useState(false);
-
     useEffect(() => {
         // Check local storage for solved state
         const solvedState = localStorage.getItem('task1Solved');
@@ -32,6 +33,55 @@ const Task1 = () => {
         setAnswer('');
     };
 
+
+    const handleSubmit2 = (event) => {
+        event.preventDefault(); // Prevent the default form submit action
+
+        // Save the team ID to local storage
+        if (teamId.trim() === "" || teamName.trim() === "") {
+            alert("Enter valid input");
+        }
+        else {
+            // Send data to API
+            sendDataToAPI(teamId, teamName);
+
+            // Save the team ID to local storage
+            localStorage.setItem('teamId', teamId.trim());
+
+            // Set solved to true
+            setSolved(true);
+        }
+
+        // Reset the inputs
+        setTeamId('');
+        setTeamName('');
+    };
+
+    const sendDataToAPI = (teamId, teamName) => {
+        // Replace 'your-api-endpoint' with your actual API endpoint
+        fetch('http://139.59.88.183:8000/api/v1/user/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ teamId, teamName })
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to send data to API');
+            }
+            return response.json();
+        })
+        .then(responseData => {
+            console.log('API Response:', responseData);
+            // Handle API response if needed
+        })
+        .catch(error => {
+            console.error('Error sending data to API:', error.message);
+            // Handle error if needed
+        });
+    };
+
     return (
         <div className="task">
             <h1>Task 1 : Erosion</h1>
@@ -58,6 +108,26 @@ const Task1 = () => {
                     <button type="submit">Submit</button>
                 </form>
             )}
+
+                <form onSubmit={handleSubmit2} >
+                    <label htmlFor="teamIdInput">Team ID:</label>
+                    <input
+                        id="teamIdInput"
+                        type="text"
+                        placeholder="Enter team ID"
+                        value={teamId}
+                        onChange={(e) => setTeamId(e.target.value)}
+                    />
+                    <label htmlFor="teamNameInput">Team Name:</label>
+                    <input
+                        id="teamNameInput"
+                        type="text"
+                        placeholder="Enter team name"
+                        value={teamName}
+                        onChange={(e) => setTeamName(e.target.value)}
+                    />
+                    <button type="submit">Submit</button>
+                </form>
         </div>
     );
 }
