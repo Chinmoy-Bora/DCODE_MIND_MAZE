@@ -5,6 +5,7 @@ const Task1 = () => {
     const [teamId, setTeamId] = useState('');
     const [teamName, setTeamName] = useState('');
     const [solved, setSolved] = useState(false);
+    const [loggedIn,setloggedIn]= useState(false);
     useEffect(() => {
         // Check local storage for solved state
         const solvedState = localStorage.getItem('task1Solved');
@@ -44,6 +45,7 @@ const Task1 = () => {
         else {
             // Send data to API
             sendDataToAPI(teamId, teamName);
+            setloggedIn(true);
 
             // Save the team ID to local storage
             localStorage.setItem('teamId', teamId.trim());
@@ -84,6 +86,9 @@ const Task1 = () => {
 
     return (
         <div className="task">
+                        {loggedIn ? (
+                <p className="solved-message">Logged In</p>
+            ) : (
 
 <form onSubmit={handleSubmit2} >
                     <label htmlFor="teamIdInput">Team ID:</label>
@@ -104,6 +109,7 @@ const Task1 = () => {
                     />
                     <button type="submit">Submit</button>
                 </form>
+            )}
             <h1>Task 1 : Erosion</h1>
             <p><h2>" Moments corrode, fading objects, fraying bonds, and dimming memories, reminding us of life's impermanence, yet urging us to cherish each fleeting instant "</h2></p>
             <div className='task_2_img' >

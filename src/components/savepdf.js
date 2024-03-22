@@ -22,15 +22,15 @@ const Savepdf = () => {
             data[key] = value;
 
             // Add key-value pair to the PDF document
-            doc.text(`${key}: ${value}`, 10, y);
-            y += 10;
+            doc.text(`${key}: ${value}`, 8, y);
+            y += 8;
         });
 
         // Add local time
         const currentTime = new Date().toLocaleString(); // Get current local time
         // Add local time to the PDF document
-        doc.text(`Local Time: ${currentTime}`, 10, y);
-        y += 10;
+        doc.text(`Local Time: ${currentTime}`, 8, y);
+        y += 8;
 
         // Convert data object to JSON string
         // const jsonData = JSON.stringify(data);
