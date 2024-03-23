@@ -15,19 +15,24 @@ const Task7 = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault(); // Prevent the default form submit action
+        const value=answer7.trim();
 
-        if (answer7.trim() === "") {
+        if (value === "") {
             alert("Enter valid input");
         }
-        else if (answer7.trim() !== "mac os") {
-            alert("Wrong answer");
-            setAnswer('');
-        }
-        else {
+        else if (value.includes("mac")) {
 
             localStorage.setItem('task7Answer', answer7.trim());
             localStorage.setItem('task7Solved', 'true');
             setSolved(true);
+            
+        }
+        else {
+
+            alert("Wrong answer");
+            setAnswer('');
+
+            
 
         }
 

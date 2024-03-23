@@ -51,7 +51,7 @@ const Task14 = () => {
                 <img src="/resource/task_5_3.webp" alt="task5_img" />
                 <img src="/resource/task_5_4.webp" alt="task5_img" />
             </div> */}
-      {/* <h3></h3> */}
+      <h3>TIPS : 5 piece in 60 /-</h3>
       {solved14 ? (
         <p className="solved-message">Solved!</p>
       ) : (
